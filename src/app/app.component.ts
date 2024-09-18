@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular16';
+
+  saluti : string = "Benvenuti in PierFolio";
+
+  bollini : number = 150;
 }
