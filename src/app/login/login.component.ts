@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  userID : String = "Pierluigi";
-  password : String = "";
+  userID : string = "Pierluigi";
+  password : string = "";
+
+  autenticato : boolean = true;
+  errorMsg : string = "Spiacente, la userID e/o la password sono errati!";
 
   constructor() {}
 
@@ -17,6 +20,13 @@ export class LoginComponent {
 
     gestAuth = () : void => {
       console.log(this.userID)
+
+      if (this.userID === "Pierluigi" && this.password === "Brindisi") {
+        this.autenticato = true;
+      }
+      else {
+        this.autenticato = false;
+      }
     }
 
   }
