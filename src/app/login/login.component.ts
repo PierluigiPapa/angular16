@@ -11,7 +11,9 @@ export class LoginComponent {
   password : string = "";
 
   autenticato : boolean = true;
+  consentito : boolean = false;
   errorMsg : string = "Spiacente, la userID e/o la password sono errati!";
+  okMsg : string = "Accesso consentito";
 
   constructor() {}
 
@@ -23,9 +25,11 @@ export class LoginComponent {
 
       if (this.userID === "Pierluigi" && this.password === "Brindisi") {
         this.autenticato = true;
+        this.consentito = true;
       }
       else {
         this.autenticato = false;
+        this.consentito = false;
       }
     }
 
