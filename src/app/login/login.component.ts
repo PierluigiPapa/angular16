@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       console.log(this.userID)
 
       if (this.userID === "Pierluigi" && this.password === "Brindisi") {
-        this.route.navigate (['welcome']);
+        this.route.navigate (['welcome', this.userID]);
         this.autenticato = true;
       }
       else {
