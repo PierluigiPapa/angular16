@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 export class WelcomeComponent implements OnInit {
 
   utente : string = "";
+  titolo : string = "Benvenuti";
+  sottotitolo: string = "Visualizza le offerte del giorno";
 
   constructor (private route: ActivatedRoute) {}
 
