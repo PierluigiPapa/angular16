@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthappService } from 'src/services/authapp.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   titolo : string = "Accesso & autenticazione";
   sottotitolo: string = "Inserisci il nome utente e la password";
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private BasicAuth : AuthappService) {}
 
     ngOnInit() : void{
     }
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
     gestAuth = () : void => {
       console.log(this.userID)
 
-      if (this.userID === "Pierluigi" && this.password === "Brindisi") {
+      if (this.BasicAuth.autentica(this.userID, this.password)) {
         this.route.navigate (['welcome', this.userID]);
         this.autenticato = true;
       }
