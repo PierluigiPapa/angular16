@@ -10,7 +10,7 @@ export class JumbotronComponent {
   @Input()
   Titolo: string = "";
   @Input()
-  Sottotitolo: string = "";
+  SottoTitolo: string = "";
   @Input()
   Show: boolean = true;
 

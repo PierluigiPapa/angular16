@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthappService } from 'src/services/authapp.service';
+
+import { AuthappService } from 'src/app/core/services/authapp.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,6 @@ import { AuthappService } from 'src/services/authapp.service';
 })
 export class HeaderComponent {
 
-  constructor (public BasicAuth : AuthappService) {}
-
-  ngOnInit () : void {
-
-  }
+  constructor(public BasicAuth: AuthappService) { }
 
 }
